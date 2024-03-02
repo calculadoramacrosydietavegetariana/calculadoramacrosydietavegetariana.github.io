@@ -1,0 +1,318 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    color: #333;
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 20px; /* Aumentar el tamaño de la fuente */
+    font-family: 'Arial', sans-serif; /* Cambiar la fuente */
+    font-weight: bold; /* Hacer el texto más grueso */
+    animation: pulse 1s infinite alternate; /* Agregar animación */
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1); /* Escala inicial */
+    }
+    to {
+        transform: scale(1.1); /* Escala al 110% */
+    }
+}
+
+
+.form {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input {
+    width: calc(100% - 40px);
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.button {
+    width: calc(100% - 40px);
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+}
+
+.details {
+    margin-top: 20px;
+}
+
+.summary {
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+}
+    
+.privacy-info,
+.legal-info,
+.fact,
+.tip {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.details[open] .summary::before {
+    content: '▼ ';
+}
+
+.details .summary::before {
+    content: '► ';
+}
+
+.details .summary {
+    cursor: pointer;
+}
+
+.details[open] .summary {
+    color: #000000;
+}
+
+.details .summary:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.tips-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tip {
+    margin-bottom: 10px;
+    background-color: #f0f8ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.tip:hover {
+    background-color: #d6e4ff;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ccc; /* Cambiado el estilo del borde */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+th {
+    background-color: #007bff; /* Cambiado el color de fondo del encabezado */
+    color: #fff; /* Cambiado el color del texto en el encabezado */
+}
+
+/* Estilo alternativo para filas pares */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cambiado el color de fondo de las filas pares */
+}
+
+/* Estilo al hacer hover sobre las filas */
+tr:hover {
+    background-color: #ddd; /* Cambiado el color de fondo al hacer hover */
+}
+
+/* Estilo para la tabla dentro del footer */
+.footer table {
+    margin-top: 30px; /* Aumentado el espacio entre la tabla y el contenido superior */
+}
+
+/* Estilo para el texto dentro de las celdas */
+th, td {
+    font-size: 16px; /* Aumentado el tamaño del texto en las celdas */
+    color: #333; /* Cambiado el color del texto en las celdas */
+}
+
+/* Animación de entrada para el contenedor principal */
+.container {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación de hover para el botón */
+.button {
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* Animación de entrada para los consejos de salud */
+.health-tips {
+    animation: slideInUp 1s ease;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de entrada para los detalles */
+.details {
+    animation: fadeIn 1s ease;
+}
+
+.details[open] .summary::before {
+    content: '▼ ';
+}
+
+.details .summary::before {
+    content: '► ';
+}
+
+.details .summary {
+    cursor: pointer;
+}
+
+.details[open] .summary {
+    color: #000;
+}
+
+.details .summary:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el banner */
+.banner {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.banner-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.banner-description {
+    font-size: 16px;
+    color: #555;
+}
